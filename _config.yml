@@ -55,7 +55,7 @@ page_titles:
 socials:
   github: "https://github.com/TriDiamond"
   twitter: "https://twitter.com/TriDiamond6"
-  stackoverflow: "https://stackoverflow.com/users/7602324/tridiamond?tab=profile"
+  # stackoverflow: "https://stackoverflow.com/users/7602324/tridiamond?tab=profile"
 
 # Enable table of content
 TOC: true
@@ -67,7 +67,7 @@ welcome_cover: /img/cover.jpg
 cover: /img/welcome-cover.jpg
 
 # Avatar
-avatar: https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg
+avatar: https://avatars0.githubusercontent.com/u/27199808?v=4
 
 # Disable default scrollbar
 scrollbar: true
@@ -108,11 +108,11 @@ mp3:
 gitalk:
   enable: true
   autoExpand: true
-  clientID: 'ec894e2b66f752e8b7fb'
-  clientSecret: '3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
-  repo: 'blog-comments'
-  owner: 'TriDiamond'
-  admin: ['TriDiamond']
+  clientID: '81b403b65516b7cae48b'
+  clientSecret: '302fae15e40bba8b73290457abc0fb0a7ed5c0e0'
+  repo: 'dario-rodriguez.github.io'
+  owner: 'dario-rodriguez'
+  admin: ['dario-rodriguez']
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
@@ -162,7 +162,7 @@ busuanzi:
 
 #Enable social media sharing
 sharejs:
-  enable: true
+  enable: false
   disabled: 'facebook,douban,linkedin,diandian,tencent,google'
 
 # Use codemirror instead of highlight js for better colors
