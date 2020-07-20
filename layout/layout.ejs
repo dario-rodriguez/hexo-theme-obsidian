@@ -1,3 +1,6 @@
+<% if(page.type === 'whoami') { %>
+<%- partial('whoami') %>
+<% } else { %>
 <%- partial('_partial/head') %>
 
 <body class="loading">
@@ -36,3 +39,4 @@
 <%- partial('_partial/scripts', null, {cache: true}) %>
 
 </html>
+<% } %>
