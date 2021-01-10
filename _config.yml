@@ -32,7 +32,8 @@
 #! ---------------------------------------------------------------
 
 # Theme version
-version: "1.4.3"
+# !! DO NOT EDIT THIS !!
+version: '1.4.4'
 
 # ---------------------------------------------------------------
 # Theme default settings
@@ -176,6 +177,22 @@ codemirror:
 # Enabling mathjax support
 mathjax: true
 
+# custom header HTML
+header_html: ''
+
+# custom footer HTML
+footer_html: '
+<!-- 例：百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?your_code";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+'
 
 resume:
   name: YOUR NAME
@@ -272,3 +289,4 @@ resume:
     proficiency: fluent
   - name: Hindi
     proficiency: native speaker
+
