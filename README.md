@@ -14,12 +14,23 @@ A dark Hexo theme, it's responsive, simple but elegant.
     <a href="https://gitter.im/TriDiamond/hexo-theme-obsidian?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/TriDiamond/hexo-theme-obsidian.svg"></a>
   </p>
 
-**[PREVIEW](http://tridiamond.tech)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
+**[PREVIEW](https://obsidian.tridiamond.tech/)** | **[CHANGES](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md)**
 
 🇨🇳 **[中文文档](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/README_CN.md)** |
 **[更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)**
 
 </div>
+
+> I am working on a brand new theme called [`Aurora`](https://github.com/auroral-ui/hexo-theme-aurora), therefore this theme currently is not actively maintained. If you are from my blog website, the theme displayed there is the new theme.
+
+<details>
+  <summary>View new theme screenshots</summary>
+
+![](https://img-blog.csdnimg.cn/202103280030531.png)
+
+![](https://img-blog.csdnimg.cn/20210328003140590.png)
+
+</details>
 
 ![screenshot](https://res.cloudinary.com/tridiamond/image/upload/v1573323147/blog/A-Obsidian-full_ubmo0d.png)
 
@@ -171,6 +182,8 @@ gitalk:
   # Ensure uniqueness and length less than 50
   id: location.pathname
   # Facebook-like distraction
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token
+  # Custom proxy server
 
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
@@ -230,6 +243,38 @@ codemirror:
 
 # Enabling mathjax support
 mathjax: true
+
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+beian:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+
+
+# Custom mouse style
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+
 ```
 
 </details>
@@ -304,6 +349,13 @@ categories: - Category1 - Category2
 tags: - Tag1 - Tag2
 mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
+
+author: 3rdparty author
+is3rdparty: true
+socials: 
+  page: https://example
+avatar: /example.jpg
+slogan: example
 ```
 
 ### Create categories page
@@ -399,3 +451,33 @@ You can give me feedback or issue you have through the following methods:
 - [Create a issue!](https://github.com/TriDiamond/hexo-theme-obsidian/issues/new)
 - Joint QQGroup `909955326`
 - [Join Telegram Group](https://t.me/joinchat/R2m4eho2lbcHLR7nDvxd6A)
+
+## Donation
+
+Are you **enjoying this project** ? 👋
+
+You can express your ❤️ by _buying me a coffee_ ☕️ to keep this project **maintained and stay alive**, I would ❤️ to **dedicate more time and effort** on it!
+
+If there are enough coffee ☕️ I would like to become a **full time open source developer**! Keep producing more _awesome themes and applications to the world_!
+
+However you could just **sharing this project with your friends**, that would _help me a lot as well_! 👊
+
+Thanks for your love in advance! ☀️
+
+|                                                                                                                Donating using Paypal                                                                                                                 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <a href="https://www.buymeacoffee.com/tridiamond" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" style="height: 60px !important;width: 217px !important;" ></a> |
+
+> All donator will be enlisted as Coffee Supporter and displayed in the Sponsor list in this section.
+
+---
+
+|                                         Wechat 微信支付                                         |                                        Alipay 支付宝支付                                        |
+| :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| <img src="https://img-blog.csdnimg.cn/20210330175112304.png" alt="Buy Me A Coffee" width="150"> | <img src="https://img-blog.csdnimg.cn/20210330175153827.png" alt="Buy Me A Coffee" width="150"> |
+
+> 所有赞助人将被列为咖啡支持者，并在本节的赞助人名单中显示。
+
+## Join the Community
+
+<a href="https://discord.gg/VC7CrYfds5" target="_blank"><img src="https://discordapp.com/api/guilds/801943105913225246/widget.png?style=banner3" alt="ObsidiaNext Community Discord Server"></a>

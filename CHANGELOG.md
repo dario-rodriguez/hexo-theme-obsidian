@@ -2,6 +2,86 @@
 
 [中文更变日志](https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG_CN.md)
 
+## 🚀 v1.4.8 (2021-04-08)
+
+- Add police beian
+- Modify beian fomat
+- Add the following code in your theme config file:
+```
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+#beianloc:
+beian: 
+# Enable
+  enable: true
+# Beian location，for example：粤ICP备
+  beianloc:
+# Beian ID，for example：2021022134号。
+  beianid:
+
+# Police Beian
+beian:
+# Enable
+  enable: true
+# Beian location，for example: 粤公网安备
+  beianloc:
+# Beian ID, for example: 44010602009049号
+  beianid:
+# Beian Icon, for example: /img/beian.png
+  beianicon:
+```
+
+## 🚀 v1.4.7 (Mar 31, 2021)
+
+- Bug fix:
+  - Now "preview" for the other article can correctly take effect now
+
+
+## 🚀 v1.4.6 (Mar 31, 2021)
+
+- Add beian ID：Add the following code in your theme config file:
+```
+# This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
+# Enable
+beian: true
+# Beian location，for example：粤ICP备
+#beianloc:
+# Beian ID，for example：2021022134号
+#beianid:
+```
+- Custom 3rdparty author：add the following code in the front-matter of your markdown file：
+```
+title: example
+author: 3rdparty author name
+is3rdparty: true
+socials: 
+  page: https://example
+avatar: /example.jpg
+slogan: example
+```
+- Custom gitalk  proxy server to avoid 403 error，add the following code in your theme config file:
+``` 
+...
+# Upper is gitalk config code
+proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token 
+...
+```
+- Add custom mouse effect and custom mouse style, add the following code in your theme config file: 
+```
+mouse:
+# Enable custom mouse style
+  enable: true
+# Default style
+  default: /default.png
+# Hover sytle
+  pointer: /hover.png
+```
+
+## 🚀 v1.4.5 (Jan 22, 2021)
+
+### Improvements
+
+- Changed the fonts links from using `loli.net` to using `baomitu.com` (which is hosted by 360, it's more stable). This changes will improve the website from loading up faster.
+
 ## 🚀 v1.4.4 (Sep 16, 2020)
 
 Fixed couple of issues, get ready for some new features! Here thank you all for the 300+ stars so far, I will keep working on improving this theme! ❤️
