@@ -1,10 +1,113 @@
-<!DOCTYPE html>
-<html>
-<%- partial('./_partial/vita/head.swig') %>
+<div id="single">
+  <%- partial("_partial/post/header")%>
+  <div class="section">
+    <div class="article-header-wrapper" style="height: 300px !important">
+      <div class="article-header">
+        <div
+          class="article-cover animated fadeIn"
+          style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: radial-gradient(
+                ellipse closest-side,
+                rgba(0, 0, 0, 0.65),
+                #100e17
+              ),
+              url(<%-url_for(page.cover || theme.welcome_cover)%>);
+          "
+        ></div>
+        <div class="else">
+          <h3 class="post-title animated fadeInDown">
+            <%- link_to(page.path, page.title || "Untitled", {class: ""}) %>
+          </h3>
+          <% if (theme.symbols_count_time.enable) {%>
+          <p class="post-count animated fadeInDown">
+            <% if (theme.symbols_count_time.wordCount) { %>
+            <span>
+              <b class="iconfont icon-text2"></b> <i><%= __('word_count') %></i>
+              <%= symbolsCount(page.content) %>
+            </span>
+            <% } %> <% if (theme.symbols_count_time.readCount) { %>
+            <span>
+              <b class="iconfont icon-timer__s"></b>
+              <i><%= __('read_time') %></i>
+              <%= symbolsTime( page.content, theme.symbols_count_time.awl,
+              theme.symbols_count_time.wpm, theme.symbols_count_time.suffix ) %>
+            </span>
+            <% } %>
+          </p>
+          <% } %>
+        </div>
+      </div>
+    </div>
 
-<body>
-    <%- partial('./_partial/vita/body.swig') %>
-    <%- partial('./_partial/vita/foot.swig') %>
-</body>
+    <div class="screen-gradient-after">
+      <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+          <div class="bold-underline-links screen-gradient-sponsor">
+            <p>
+              <span class="animated fadeIn delay-1s"
+                ><%- page.abstract || '' %></span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-</html>
+    <div class="article">
+      <div class="main">
+        <div class="content markdown animated fadeIn"><%- page.content %></div>
+        <div class="sidebar">
+          <div class="box animated fadeInRight">
+            <div class="subbox">
+              <img
+                src="<%- page.avatar || theme.avatar %>"
+                height="300"
+                width="300"
+              />
+              <p><%- page.author || config.author %></p>
+              <span><%- page.slogan || theme.descriptionOne %></span>
+              <dl>
+                <% if (page.is3rdparty == false){%>
+                <dd>
+                  <a href="<%- theme.socials.github %>" target="_blank"
+                    ><span class="iconfont icon-github"></span
+                  ></a>
+                </dd>
+                <dd>
+                  <a href="<%- theme.socials.twitter %>" target="_blank"
+                    ><span class="iconfont icon-twitter"></span
+                  ></a>
+                </dd>
+                <dd>
+                  <a href="<%- theme.socials.stackoverflow %>" target="_blank"
+                    ><span class="iconfont icon-stack-overflow"></span
+                  ></a>
+                </dd>
+                <% } %> <% if (page.is3rdparty == true){%>
+                <dd></dd>
+                <dd>
+                  <a href="<%- page.socials.page %>" target="_blank"
+                    ><span class="iconfont icon-github"></span
+                  ></a>
+                </dd>
+                <dd></dd>
+                <% } %>
+              </dl>
+            </div>
+          </div>
+          <% if (theme.TOC == true) { %> <% toc = toc(page.content,
+          {list_number: true, max_depth: 3}) %> <% if (toc.length > 1) { %>
+          <div class="box sticky animated fadeInRight faster">
+            <div id="toc" class="subbox">
+              <h4><%= __('toc') %></h4>
+              <%- toc %>
+            </div>
+          </div>
+          <%}%> <%}%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

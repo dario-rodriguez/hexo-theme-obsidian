@@ -1,6 +1,4 @@
-<% if(page.type === 'whoami') { %>
-<%- partial('whoami') %>
-<% } else { %>
+
 <%- partial('_partial/head') %>
 
 <body class="loading">
@@ -33,14 +31,14 @@
             <%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian", "Obsidian", {external: true})%>
         </span>
         <small><%- link_to("https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md", 'v'+theme.version, {external: true})%></small>
-        <% if (theme.beian.enable == true) { %>
+        <% if (theme.beian && theme.beian.enable == true) { %>
         </br>
         <%= theme.beian.beianloc %>
         <span class="gradient-text">
             <%- link_to("https://beian.miit.gov.cn/", theme.beian.beianid, {external: true})%>
         </span>
         <% } %>
-        <% if (theme.police.enable == true) { %>
+        <% if (theme.police && theme.police.enable == true) { %>
         </br>
         <span style="display: inline-block;"> <img src=<%- url_for(theme.police.beianicon) %>></span>
         <%= theme.police.beianloc %>
@@ -56,4 +54,3 @@
 <%- theme.footer_html %>
 
 </html>
-<% } %>
