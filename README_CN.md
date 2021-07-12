@@ -252,14 +252,14 @@ beian:
   beianid:
 
 # 公安互联网备案
-beian:
+police:
 # 启用备案
   enable: true
 # 备案地区，例子：粤公网安备
   beianloc:
 # 备案号，例子：44010602009049号
   beianid:
-# 公安互联网备案图标
+# 公安互联网备案图标，例子：/img/beian.png
   beianicon:
 
 # 自定义鼠标样式
@@ -271,6 +271,12 @@ mouse:
 # 悬浮及点击样式
   pointer: /hover.png
 
+# APlayer, 目前只支持网易云歌单
+aplayer:
+  # 启用aplayer
+  enable: true
+  # 歌单ID
+  musiclist: ""
 ```
 
 </details>
@@ -346,11 +352,24 @@ mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 
 author: 第三方作者名
-is3rdparty: true
 socials: 
   page: https://example
 avatar: /example.jpg
 slogan: example
+
+socials:
+    page: 
+        link: 社交平台链接
+        name: 需要的iconfont名称，例子：icon-bilibili-fill
+        path: iconfont的css文件位置，例子：/css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### 创建分类页

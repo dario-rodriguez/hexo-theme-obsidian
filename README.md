@@ -245,7 +245,7 @@ codemirror:
 mathjax: true
 
 # This function is only used for those that server is located in China. If your server is located in outside China, you do not need to add the following code.
-#beianloc:
+#Beian:
 beian: 
 # Enable
   enable: true
@@ -255,7 +255,7 @@ beian:
   beianid:
 
 # Police Beian
-beian:
+police:
 # Enable
   enable: true
 # Beian location，for example: 粤公网安备
@@ -264,7 +264,6 @@ beian:
   beianid:
 # Beian Icon, for example: /img/beian.png
   beianicon:
-
 
 # Custom mouse style
 mouse:
@@ -275,6 +274,12 @@ mouse:
 # Hover sytle
   pointer: /hover.png
 
+# APlayer, now only support netease music list
+aplayer:
+  # Enable aplayer
+  enable: true
+  # Music list ID
+  musiclist: ""
 ```
 
 </details>
@@ -351,11 +356,24 @@ mp3: http://domain.com/awesome.mp3
 cover: http://domain.com/awesome.jpg
 
 author: 3rdparty author
-is3rdparty: true
 socials: 
   page: https://example
 avatar: /example.jpg
 slogan: example
+
+socials:
+    page: 
+        link: social platform link
+        name: the iconfont you want to use, for example: icon-bilibili-fill
+        path: the css file of your iconfont, for example: /css/font_bilibili/iconfont.css
+    page2: 
+        link: 
+        name: 
+        path: 
+    page3: 
+        link: 
+        name: 
+        path: 
 ```
 
 ### Create categories page
